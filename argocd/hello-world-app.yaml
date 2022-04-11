@@ -1,1 +1,20 @@
-
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-world
+  namespace: argocd
+spec:
+  destination:
+    namespace: hello-world-stag
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: kustomization/overlays/staging
+    repoURL: https://github.com/ilhamderi/hello-world
+    targetRevision: minikube
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
