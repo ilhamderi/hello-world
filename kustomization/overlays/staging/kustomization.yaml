@@ -6,4 +6,4 @@ namespace: hello-world-stag
 images:
   - name: ilhamderi/hello-world:latest
     newName: ilhamderi/hello-world
-    newTag: v1.0.2-staging
+    newTag: v1.0.3-staging
