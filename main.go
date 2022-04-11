@@ -15,7 +15,7 @@ func check(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", index)
-	http.HandleFunc("/health_check", check)
+	http.HandleFunc("/health-check", check)
 	fmt.Println("Server starting...")
 	http.ListenAndServe(":3000", nil)
 }
