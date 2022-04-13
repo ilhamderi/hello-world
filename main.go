@@ -10,7 +10,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 }
 
 func check(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<h1>Service Healthy</h1>")
+	fmt.Fprintf(w, "<h1>Service Healthy!!</h1>")
 }
 
 func main() {
